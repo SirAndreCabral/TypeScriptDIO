@@ -1,13 +1,12 @@
-import Footer from "./Footer";
+import { Box } from "@chakra-ui/react";
 import Header from "./Header";
 
 const Layout = ({ children }: any) => {
     return (
-        <>
-            <Header />
+        <Box backgroundColor="#003" height="100vh">
+        <Header />
             { children } 
-            <Footer />
-        </>
+        </Box>
     );
 }
 

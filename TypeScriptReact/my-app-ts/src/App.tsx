@@ -1,29 +1,18 @@
-import './App.css';
-import Card from './components/Card';
-import Layout from './components/Layout';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Conta from './pages/Conta';
+import Home from './pages/Home';
+import ContaInfo from './pages/ContaInfo';
 
 function App() {
+
   return (
-    <>
-      <Layout>
-        Hello World
-        <Card 
-          id={1}
-          details='TS'
-          paragraph='Front com TS'
-        />
-        <Card 
-          id={2}
-          details='HTML'
-          paragraph='Front com HTML'
-          />
-        <Card
-          id={3}
-          details='SQL'
-          paragraph='Query SQL'
-          />
-      </Layout>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/conta/' element={<ContaInfo />}/>
+        <Route path='/conta/:id' element={<Conta />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

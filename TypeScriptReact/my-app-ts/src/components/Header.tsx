@@ -1,8 +1,12 @@
+import { Box, Center, Text } from "@chakra-ui/react";
+
 const Header = () => {
     return (
-        <div>
-            Header
-        </div>
+        <Box backgroundColor='orange'>
+            <Center>
+                <Text fontSize='3x1'>Dio Bank</Text>
+            </Center>
+        </Box>
     );
 }
 
